@@ -1,6 +1,22 @@
 {
   "version": 1,
-  "lastPublishedDate": "2026-02-14",
-  "publishedUrls": [],
+  "lastPublishedDate": "2026-02-15",
+  "publishedUrls": [
+    "https://www.anthropic.com/news/anthropic-raises-30-billion-series-g-funding-380-billion-post-money-valuation",
+    "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-deep-think/",
+    "https://openai.com/index/introducing-gpt-5-3-codex-spark/",
+    "https://simonwillison.net/2026/Feb/12/codex-spark/",
+    "https://venturebeat.com/technology/minimaxs-new-open-m2-5-and-m2-5-lightning-near-state-of-the-art-while",
+    "https://theshamblog.com/an-ai-agent-published-a-hit-piece-on-me-part-2/",
+    "https://simonwillison.net/2026/Feb/13/openai-mission-statement/",
+    "https://fortune.com/2026/02/13/tech-giant-ibm-tripling-gen-z-entry-level-hiring-according-to-chro-rewriting-jobs-ai-era/",
+    "https://simonwillison.net/2026/Feb/14/thoughtworks/",
+    "https://ziglang.org/devlog/2026/#2026-02-13",
+    "https://www.vim.org/vim-9.2-released.php",
+    "https://newsletter.pragmaticengineer.com/p/the-programming-language-after-kotlin",
+    "https://stratechery.com/2026/aggregators-and-ai/",
+    "https://blog.bytebytego.com/p/ep202-mcp-vs-rag-vs-ai-agents",
+    "https://simonwillison.net/2026/Feb/13/anthropic-public-benefit-mission/"
+  ],
   "pending": []
 }
