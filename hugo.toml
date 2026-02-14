@@ -40,10 +40,10 @@ buildExpired = false
     imageTitle = "Peon"
     [[params.profileMode.buttons]]
       name = "📰 资讯摘要"
-      url = "/categories/digest/"
+      url = "categories/digest/"
     [[params.profileMode.buttons]]
       name = "🔧 技术"
-      url = "/categories/tech/"
+      url = "categories/tech/"
 
   [[params.socialIcons]]
     name = "github"
