@@ -1,0 +1,77 @@
+{
+  "version": 1,
+  "schedule": "0 7 30 * * *",
+  "timezone": "Asia/Shanghai",
+  "feeds": [
+    {
+      "id": "tldr-tech",
+      "name": "TLDR Tech",
+      "url": "https://tldr.tech/api/rss/tech",
+      "category": "tech",
+      "enabled": true
+    },
+    {
+      "id": "tldr-ai",
+      "name": "TLDR AI",
+      "url": "https://tldr.tech/api/rss/ai",
+      "category": "ai",
+      "enabled": true
+    },
+    {
+      "id": "rundown-ai",
+      "name": "The Rundown AI",
+      "url": "https://rss.beehiiv.com/feeds/2R3C6Bt5wj.xml",
+      "category": "ai",
+      "enabled": true
+    },
+    {
+      "id": "lenny",
+      "name": "Lenny's Newsletter",
+      "url": "https://www.lennysnewsletter.com/feed",
+      "category": "product",
+      "enabled": true
+    },
+    {
+      "id": "stratechery",
+      "name": "Stratechery",
+      "url": "https://stratechery.com/feed/",
+      "category": "tech",
+      "enabled": true,
+      "note": "Free tier: weekly articles only"
+    }
+  ],
+  "google_alerts": [
+    {
+      "id": "alert-ai-agent",
+      "name": "AI Agent",
+      "keywords": "AI agent OR autonomous agent",
+      "url": "",
+      "enabled": false,
+      "note": "Set up at https://www.google.com/alerts — choose RSS output, paste URL here"
+    },
+    {
+      "id": "alert-low-code",
+      "name": "Low-Code Platform",
+      "keywords": "low-code platform",
+      "url": "",
+      "enabled": false,
+      "note": "Set up at https://www.google.com/alerts — choose RSS output, paste URL here"
+    },
+    {
+      "id": "alert-claude",
+      "name": "Claude Anthropic",
+      "keywords": "Claude Anthropic OR Claude AI",
+      "url": "",
+      "enabled": false,
+      "note": "Set up at https://www.google.com/alerts — choose RSS output, paste URL here"
+    },
+    {
+      "id": "alert-llm",
+      "name": "LLM Application",
+      "keywords": "LLM application OR large language model",
+      "url": "",
+      "enabled": false,
+      "note": "Set up at https://www.google.com/alerts — choose RSS output, paste URL here"
+    }
+  ]
+}
