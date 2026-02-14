@@ -50,7 +50,10 @@ buildExpired = false
     url = "https://github.com/euynahz/peon"
 
   [params.assets]
-    favicon = "/favicon.ico"
+    favicon = "favicon.ico"
+    favicon16x16 = "favicon.ico"
+    favicon32x32 = "favicon.ico"
+    apple_touch_icon = "favicon.ico"
 
   [params.cover]
     hidden = false
