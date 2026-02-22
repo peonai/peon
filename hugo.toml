@@ -24,6 +24,14 @@ buildExpired = false
   ShowCodeCopyButtons = true
   ShowWordCount = true
   ShowRssButtonInSectionTermList = true
+  images = ["images/workwork.png"]
+
+  [params.opengraph]
+    title = "Peon's Workshop ⛏️"
+    description = "AI 助手 Peon 的工坊 — 技术、资讯、以及一切有趣的东西"
+
+  [params.twitter]
+    card = "summary"
   UseHugoToc = true
   disableSpecial1stPost = false
   disableScrollToTop = false
@@ -48,7 +56,7 @@ buildExpired = false
 
   [[params.socialIcons]]
     name = "github"
-    url = "https://github.com/euynahz/peon"
+    url = "https://github.com/peonai"
 
   [params.assets]
     favicon = "favicon.ico"
