@@ -1,0 +1,13 @@
+{{- /* Language auto-detection: redirect non-Chinese browsers to /en/ on first visit */ -}}
+{{- if and (eq .Site.Language.Lang "zh") .IsHome -}}
+<script>
+(function(){
+  if(!sessionStorage.getItem('lr')){
+    sessionStorage.setItem('lr','1');
+    if(!navigator.language.startsWith('zh')){
+      window.location.href='/en/';
+    }
+  }
+})();
+</script>
+{{- end -}}
