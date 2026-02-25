@@ -1,45 +1,48 @@
 # Peon's Workshop ⛏️
 
-AI 驱动的每日资讯摘要博客。RSS 订阅 → LLM 中文摘要 + 点评 → Hugo 静态站 → GitHub Pages 自动部署。
+[🇨🇳 中文版](README.zh.md)
 
-**零人工干预，全自动运行。**
+An AI-powered daily tech digest blog. RSS feeds → LLM summarization + commentary → Hugo static site → GitHub Pages auto-deploy.
 
-## 它做了什么
+**Zero human intervention. Fully automated.**
 
-每天早上 7:30，一个 AI Agent 自动执行以下流程：
+## What It Does
+
+Every morning at 7:30 AM, an AI Agent automatically runs this pipeline:
 
 ```
-RSS Feeds → 拉取最近 24h 文章 → 抓取全文 → 生成中文摘要 + AI 点评 → Hugo Markdown → Git Push → GitHub Actions 构建部署 → IM 通知
+RSS Feeds → Fetch articles from last 24h → Extract full text → Generate bilingual summaries + AI commentary → Hugo Markdown → Git Push → GitHub Actions build & deploy → IM notification
 ```
 
-产出是一篇结构化的中文资讯摘要，按数据源分组，每篇文章包含：
-- 中文标题 + 原文链接
-- 3-5 个要点摘要
-- AI 的个人观点和点评（不是机械翻译）
+The output is a structured tech digest, grouped by source, each article containing:
+- Title + original link
+- 3-5 key takeaways
+- AI's personal opinion and commentary (not mechanical translation)
 
-## 技术栈
+## Tech Stack
 
-| 组件 | 选型 | 说明 |
-|------|------|------|
-| 静态站生成 | [Hugo](https://gohugo.io/) ≥ 0.146 | 构建速度快，Markdown 原生 |
-| 主题 | [PaperMod](https://github.com/adityatelange/hugo-PaperMod) | 简洁、移动端友好、暗色模式 |
-| 部署 | GitHub Pages + Actions | 推送即部署，零运维 |
-| 调度 | [OpenClaw](https://openclaw.ai) Cron | agentTurn 模式，isolated session |
-| AI 引擎 | Claude (Anthropic) | 摘要生成 + 点评 + 文章撰写 |
-| RSS 拉取 | LLM 内置 web_fetch | 无需额外依赖 |
-| 通知 | IM Webhook | 可对接钉钉/Telegram/Discord 等 |
+| Component | Choice | Notes |
+|-----------|--------|-------|
+| Static Site | [Hugo](https://gohugo.io/) ≥ 0.146 | Fast builds, native Markdown |
+| Theme | [PaperMod](https://github.com/adityatelange/hugo-PaperMod) | Clean, mobile-friendly, dark mode |
+| Deploy | GitHub Pages + Actions | Push to deploy, zero ops |
+| Scheduler | [OpenClaw](https://openclaw.ai) Cron | agentTurn mode, isolated session |
+| AI Engine | Claude (Anthropic) | Summarization + commentary + writing |
+| RSS Fetch | LLM built-in web_fetch | No extra dependencies |
+| Notifications | IM Webhook | DingTalk / Telegram / Discord / Feishu |
+| i18n | Hugo multilingual | Chinese (default) + English, auto-detect |
 
-## 架构
+## Architecture
 
 ```
 ┌─────────────┐     ┌──────────────┐     ┌─────────────┐
-│  Cron 触发   │────▶│  AI Agent    │────▶│  Hugo Build │
+│  Cron Trigger│────▶│  AI Agent    │────▶│  Hugo Build │
 │  (7:30 AM)  │     │  (isolated)  │     │  + Git Push │
 └─────────────┘     └──────┬───────┘     └──────┬──────┘
                            │                     │
                     ┌──────▼───────┐     ┌──────▼──────┐
                     │  RSS Feeds   │     │   GitHub    │
-                    │  (10 数据源) │     │   Actions   │
+                    │  (10 sources)│     │   Actions   │
                     └──────────────┘     └──────┬──────┘
                                                 │
                                          ┌──────▼──────┐
@@ -48,13 +51,13 @@ RSS Feeds → 拉取最近 24h 文章 → 抓取全文 → 生成中文摘要 + 
                                          └──────┬──────┘
                                                 │
                                          ┌──────▼──────┐
-                                         │  IM 通知    │
+                                         │ IM Notify   │
                                          └─────────────┘
 ```
 
-## 数据源配置
+## Feed Configuration
 
-RSS 源在 `scripts/feeds.json` 中管理：
+RSS sources are managed in `scripts/feeds.json`:
 
 ```jsonc
 {
@@ -66,129 +69,88 @@ RSS 源在 `scripts/feeds.json` 中管理：
       "category": "tech",
       "enabled": true
     }
-    // ...更多源
-  ],
-  "google_alerts": [
-    {
-      "id": "alert-ai-agent",
-      "name": "AI Agent",
-      "keywords": "AI agent OR autonomous agent",
-      "url": "",           // ← 在 google.com/alerts 创建后填入 RSS URL
-      "enabled": false
-    }
   ]
 }
 ```
 
-当前订阅源（10 个）：
+Current subscriptions (10 sources):
 
-| 源 | 类型 | 频率 | 说明 |
-|----|------|------|------|
-| [TLDR Tech](https://tldr.tech) | 科技综合 | 每日 | 大厂动态、融资、开发者工具 |
-| [TLDR AI](https://tldr.tech) | AI 专题 | 每日 | 模型发布、研究论文、AI 工具 |
-| [The Rundown AI](https://www.therundown.ai) | AI 实操 | 每日 | 偏实用教程和工具推荐 |
-| [Hacker News](https://news.ycombinator.com) | 技术社区 | 实时 | 技术社区风向标，每日精选 3-5 条 |
-| [Simon Willison's Weblog](https://simonwillison.net) | AI 实践 | 高频 | LLM 实践第一人，必读 |
-| [Lenny's Newsletter](https://www.lennysnewsletter.com) | 产品/增长 | 每周 | 产品管理、增长策略、深度访谈 |
-| [Stratechery](https://stratechery.com) | 科技战略 | 每周 | Ben Thompson 的深度商业分析 |
-| [The Pragmatic Engineer](https://newsletter.pragmaticengineer.com) | 工程管理 | 每周 | 大厂工程实践、职业发展 |
-| [Benedict Evans](https://www.ben-evans.com) | 宏观趋势 | 低频 | 科技行业宏观分析 |
-| [ByteByteGo](https://blog.bytebytego.com) | 系统设计 | 每周 | 系统设计图解、架构模式 |
+| Source | Type | Frequency | Notes |
+|--------|------|-----------|-------|
+| [TLDR Tech](https://tldr.tech) | General Tech | Daily | Big tech, funding, dev tools |
+| [TLDR AI](https://tldr.tech) | AI Focus | Daily | Model releases, papers, AI tools |
+| [The Rundown AI](https://www.therundown.ai) | AI Practical | Daily | Tutorials and tool reviews |
+| [Hacker News](https://news.ycombinator.com) | Tech Community | Real-time | Community pulse, 3-5 daily picks |
+| [Simon Willison](https://simonwillison.net) | AI Practice | Frequent | LLM practitioner #1, must-read |
+| [Lenny's Newsletter](https://www.lennysnewsletter.com) | Product/Growth | Weekly | Product management, growth strategy |
+| [Stratechery](https://stratechery.com) | Tech Strategy | Weekly | Ben Thompson's deep business analysis |
+| [Pragmatic Engineer](https://newsletter.pragmaticengineer.com) | Engineering | Weekly | Big tech engineering practices |
+| [Benedict Evans](https://www.ben-evans.com) | Macro Trends | Low | Tech industry macro analysis |
+| [ByteByteGo](https://blog.bytebytego.com) | System Design | Weekly | System design diagrams, architecture |
 
-扩展很简单——往 `feeds.json` 里加一条就行。
+Adding sources is simple — just add an entry to `feeds.json`.
 
-## 文章格式
+## Self-Host Your Own
 
-每篇摘要的结构：
-
-```markdown
----
-title: "📰 每日资讯 | 2026-02-14"
-date: 2026-02-14
-categories: ["digest"]
-tags: ["ai", "google", "openai"]  # 动态生成
----
-
-## 🤖 TLDR AI
-
-### [文章标题](原文链接)
-
-中文摘要内容...
-
-**Peon 点评：** AI 的个人观点，不是翻译，是真的在聊。
-```
-
-## 自己搭一个
-
-### 前置条件
+### Prerequisites
 
 - [Hugo](https://gohugo.io/installation/) ≥ 0.146
-- Git + GitHub 账号
-- [OpenClaw](https://openclaw.ai) （或任何能定时触发 LLM 的调度器）
-- 一个 LLM API（Claude / GPT / 其他）
+- Git + GitHub account
+- [OpenClaw](https://openclaw.ai) (or any scheduler that can trigger LLM calls)
+- An LLM API (Claude / GPT / etc.)
 
-### 步骤
+### Steps
 
-1. Fork 或 clone 本仓库
-2. 修改 `hugo.toml` 中的 `baseURL`、`title`、`description` 等
-3. 编辑 `scripts/feeds.json`，配置你感兴趣的 RSS 源
-4. 在 GitHub 仓库设置中启用 Pages（Source: GitHub Actions）
-5. 配置定时任务触发 LLM 执行摘要生成流程
+1. Fork or clone this repo
+2. Edit `hugo.toml` — update `baseURL`, `title`, `description`
+3. Edit `scripts/feeds.json` with your preferred RSS sources
+4. Enable GitHub Pages in repo settings (Source: GitHub Actions)
+5. Set up a cron job to trigger the LLM digest pipeline
 
-### Cron Prompt 参考
+### Key Design Decisions
 
-如果你用 OpenClaw，核心 prompt 大致是：
+- **One daily roundup post**, not one post per article — better mobile reading experience
+- **AI commentary is not translation** — it needs opinions and attitude, otherwise it's just Google Translate
+- **If a source is down, skip it** — don't let one failure break the whole pipeline
+- **No new content = no post** — don't create noise
 
-```
-1. 读取 feeds.json 获取所有 enabled=true 的 RSS 源
-2. 用 web_fetch 逐个拉取 RSS feed，解析最近 24h 内的新文章
-3. 对每篇文章抓取全文，生成中文摘要（3-5 个要点）+ 你的点评
-4. 按数据源分组，生成 Hugo markdown，保存到 content/posts/
-5. hugo --minify 验证构建
-6. git add + commit + push
-7. 通知
-```
-
-关键设计决策：
-- **一天一篇汇总**，不是一篇文章一个 post——移动端阅读体验更好
-- **AI 点评不是翻译**——要有观点、有态度，否则跟 Google Translate 没区别
-- **某个源挂了就跳过**——不要因为一个源失败就整体失败
-- **所有源都没新内容就不发**——别制造噪音
-
-## 本地开发
+## Local Development
 
 ```bash
-# 安装 Hugo (macOS)
+# Install Hugo (macOS)
 brew install hugo
 
-# 安装 Hugo (Ubuntu/WSL)
-# 注意：apt 版本可能太旧，建议从 GitHub Releases 下载 .deb
+# Install Hugo (Ubuntu/WSL)
+# Note: apt version may be outdated, download .deb from GitHub Releases
 # https://github.com/gohugoio/hugo/releases
 
-# 本地预览
+# Local preview
 hugo server -D
 
-# 构建
+# Build
 hugo --minify
 ```
 
-## 目录结构
+## Project Structure
 
 ```
 .
 ├── content/
-│   ├── posts/                    # 文章
+│   ├── posts/                    # Articles (*.md = Chinese, *.en.md = English)
 │   │   ├── 2026-02-14-daily-digest.md
+│   │   ├── 2026-02-14-daily-digest.en.md
 │   │   └── ...
-│   └── search.md                 # 搜索页
+│   └── search.md / search.en.md  # Search pages
 ├── scripts/
-│   └── feeds.json                # RSS 源配置
+│   └── feeds.json                # RSS source config
+├── layouts/
+│   └── partials/extend_head.html # Language auto-detect
 ├── static/
-│   ├── images/workwork.png       # 头像
+│   ├── images/workwork.png       # Avatar
 │   └── favicon.ico
 ├── .github/workflows/
-│   └── deploy.yml                # GitHub Actions 部署
-└── hugo.toml                     # Hugo 配置
+│   └── deploy.yml                # GitHub Actions deploy
+└── hugo.toml                     # Hugo config (bilingual)
 ```
 
 ## License
