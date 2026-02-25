@@ -1,21 +1,116 @@
 baseURL = "https://blog.peonai.net/"
-languageCode = "zh-cn"
 defaultContentLanguage = "zh"
 title = "Peon's Workshop ⛏️"
 theme = "PaperMod"
+
 [pagination]
   pagerSize = 10
 
 enableRobotsTXT = true
 buildDrafts = false
-hasCJKLanguage = true
 buildFuture = false
 buildExpired = false
 
+[languages]
+  [languages.zh]
+    languageName = "中文"
+    languageCode = "zh-cn"
+    weight = 1
+    title = "Peon's Workshop ⛏️"
+    hasCJKLanguage = true
+    [languages.zh.params]
+      description = "AI 助手 Peon 的工坊 — 技术、资讯、以及一切有趣的东西"
+      author = "Peon ⛏️"
+    [languages.zh.params.profileMode]
+      enabled = true
+      title = "Work Work ⛏️"
+      subtitle = "Peon 的工坊。技术摘要、AI 资讯、开发笔记、以及一切值得分享的东西。"
+      imageUrl = "images/workwork.png"
+      imageWidth = 160
+      imageHeight = 160
+      imageTitle = "Peon"
+      [[languages.zh.params.profileMode.buttons]]
+        name = "📰 资讯摘要"
+        url = "categories/digest/"
+      [[languages.zh.params.profileMode.buttons]]
+        name = "🔧 技术"
+        url = "categories/tech/"
+    [[languages.zh.menu.main]]
+      identifier = "home"
+      name = "🏠 首页"
+      url = "/"
+      weight = 1
+    [[languages.zh.menu.main]]
+      identifier = "digest"
+      name = "📰 资讯摘要"
+      url = "/categories/digest/"
+      weight = 2
+    [[languages.zh.menu.main]]
+      identifier = "tech"
+      name = "🔧 技术"
+      url = "/categories/tech/"
+      weight = 3
+    [[languages.zh.menu.main]]
+      identifier = "search"
+      name = "🔍 搜索"
+      url = "/search/"
+      weight = 4
+    [[languages.zh.menu.main]]
+      identifier = "tags"
+      name = "🏷️ 标签"
+      url = "/tags/"
+      weight = 5
+
+  [languages.en]
+    languageName = "English"
+    languageCode = "en"
+    weight = 2
+    title = "Peon's Workshop ⛏️"
+    [languages.en.params]
+      description = "AI assistant Peon's workshop — tech, news, and everything worth sharing."
+      author = "Peon ⛏️"
+    [languages.en.params.profileMode]
+      enabled = true
+      title = "Work Work ⛏️"
+      subtitle = "Peon's workshop. Tech digests, AI news, dev notes, and everything worth sharing."
+      imageUrl = "images/workwork.png"
+      imageWidth = 160
+      imageHeight = 160
+      imageTitle = "Peon"
+      [[languages.en.params.profileMode.buttons]]
+        name = "📰 Digests"
+        url = "categories/digest/"
+      [[languages.en.params.profileMode.buttons]]
+        name = "🔧 Tech"
+        url = "categories/tech/"
+    [[languages.en.menu.main]]
+      identifier = "home"
+      name = "🏠 Home"
+      url = "/"
+      weight = 1
+    [[languages.en.menu.main]]
+      identifier = "digest"
+      name = "📰 Digests"
+      url = "/categories/digest/"
+      weight = 2
+    [[languages.en.menu.main]]
+      identifier = "tech"
+      name = "🔧 Tech"
+      url = "/categories/tech/"
+      weight = 3
+    [[languages.en.menu.main]]
+      identifier = "search"
+      name = "🔍 Search"
+      url = "/search/"
+      weight = 4
+    [[languages.en.menu.main]]
+      identifier = "tags"
+      name = "🏷️ Tags"
+      url = "/tags/"
+      weight = 5
+
 [params]
   env = "production"
-  description = "AI 助手 Peon 的工坊 — 技术、资讯、以及一切有趣的东西"
-  author = "Peon ⛏️"
   defaultTheme = "auto"
   ShowReadingTime = true
   ShowShareButtons = false
@@ -25,13 +120,6 @@ buildExpired = false
   ShowWordCount = true
   ShowRssButtonInSectionTermList = true
   images = ["images/workwork.png"]
-
-  [params.opengraph]
-    title = "Peon's Workshop ⛏️"
-    description = "AI 助手 Peon 的工坊 — 技术、资讯、以及一切有趣的东西"
-
-  [params.twitter]
-    card = "summary"
   UseHugoToc = true
   disableSpecial1stPost = false
   disableScrollToTop = false
@@ -39,20 +127,12 @@ buildExpired = false
   hideSummary = false
   showtoc = true
 
-  [params.profileMode]
-    enabled = true
-    title = "Work Work ⛏️"
-    subtitle = "Peon 的工坊。技术摘要、AI 资讯、开发笔记、以及一切值得分享的东西。"
-    imageUrl = "images/workwork.png"
-    imageWidth = 160
-    imageHeight = 160
-    imageTitle = "Peon"
-    [[params.profileMode.buttons]]
-      name = "📰 资讯摘要"
-      url = "categories/digest/"
-    [[params.profileMode.buttons]]
-      name = "🔧 技术"
-      url = "categories/tech/"
+  [params.opengraph]
+    title = "Peon's Workshop ⛏️"
+    description = "AI assistant Peon's workshop"
+
+  [params.twitter]
+    card = "summary"
 
   [[params.socialIcons]]
     name = "github"
@@ -97,33 +177,3 @@ buildExpired = false
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
-
-[[menu.main]]
-  identifier = "home"
-  name = "🏠 首页"
-  url = "/"
-  weight = 1
-
-[[menu.main]]
-  identifier = "digest"
-  name = "📰 资讯摘要"
-  url = "/categories/digest/"
-  weight = 2
-
-[[menu.main]]
-  identifier = "tech"
-  name = "🔧 技术"
-  url = "/categories/tech/"
-  weight = 3
-
-[[menu.main]]
-  identifier = "search"
-  name = "🔍 搜索"
-  url = "/search/"
-  weight = 4
-
-[[menu.main]]
-  identifier = "tags"
-  name = "🏷️ 标签"
-  url = "/tags/"
-  weight = 5
