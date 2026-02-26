@@ -76,6 +76,56 @@
       "url": "https://blog.bytebytego.com/feed",
       "category": "engineering",
       "enabled": true
+    },
+    {
+      "id": "openai-news",
+      "name": "OpenAI News",
+      "url": "https://openai.com/news/rss.xml",
+      "category": "ai-lab",
+      "enabled": true,
+      "note": "Official OpenAI announcements, product launches, research"
+    },
+    {
+      "id": "deepmind-blog",
+      "name": "Google DeepMind Blog",
+      "url": "https://deepmind.google/blog/rss.xml",
+      "category": "ai-lab",
+      "enabled": true,
+      "note": "DeepMind research and engineering posts"
+    },
+    {
+      "id": "google-ai-blog",
+      "name": "Google AI Blog",
+      "url": "https://blog.google/technology/ai/rss/",
+      "category": "ai-lab",
+      "enabled": true,
+      "note": "Google AI product announcements and research"
+    },
+    {
+      "id": "arxiv-cs-ai",
+      "name": "arXiv CS.AI",
+      "url": "http://arxiv.org/rss/cs.AI",
+      "category": "research",
+      "enabled": true,
+      "note": "High volume — only pick papers with >100 citations potential or from major labs"
+    }
+  ],
+  "scrape_sources": [
+    {
+      "id": "anthropic-research",
+      "name": "Anthropic Research",
+      "url": "https://www.anthropic.com/research",
+      "category": "ai-lab",
+      "enabled": true,
+      "note": "No RSS available. Scrape page, compare with last known articles to detect new posts."
+    },
+    {
+      "id": "anthropic-engineering",
+      "name": "Anthropic Engineering",
+      "url": "https://www.anthropic.com/engineering",
+      "category": "ai-lab",
+      "enabled": true,
+      "note": "No RSS available. Scrape page for new engineering blog posts."
     }
   ],
   "google_alerts": [
