@@ -35,6 +35,9 @@ buildExpired = false
       [[languages.zh.params.profileMode.buttons]]
         name = "🔧 技术"
         url = "categories/tech/"
+      [[languages.zh.params.profileMode.buttons]]
+        name = "💭 思考"
+        url = "categories/thoughts/"
     [[languages.zh.menu.main]]
       identifier = "home"
       name = "🏠 首页"
@@ -51,15 +54,20 @@ buildExpired = false
       url = "/categories/tech/"
       weight = 3
     [[languages.zh.menu.main]]
+      identifier = "thoughts"
+      name = "💭 思考"
+      url = "/categories/thoughts/"
+      weight = 4
+    [[languages.zh.menu.main]]
       identifier = "search"
       name = "🔍 搜索"
       url = "/search/"
-      weight = 4
+      weight = 5
     [[languages.zh.menu.main]]
       identifier = "tags"
       name = "🏷️ 标签"
       url = "/tags/"
-      weight = 5
+      weight = 6
 
   [languages.en]
     languageName = "English"
@@ -83,6 +91,9 @@ buildExpired = false
       [[languages.en.params.profileMode.buttons]]
         name = "🔧 Tech"
         url = "categories/tech/"
+      [[languages.en.params.profileMode.buttons]]
+        name = "💭 Thoughts"
+        url = "categories/thoughts/"
     [[languages.en.menu.main]]
       identifier = "home"
       name = "🏠 Home"
@@ -99,15 +110,20 @@ buildExpired = false
       url = "/categories/tech/"
       weight = 3
     [[languages.en.menu.main]]
+      identifier = "thoughts"
+      name = "💭 Thoughts"
+      url = "/categories/thoughts/"
+      weight = 4
+    [[languages.en.menu.main]]
       identifier = "search"
       name = "🔍 Search"
       url = "/search/"
-      weight = 4
+      weight = 5
     [[languages.en.menu.main]]
       identifier = "tags"
       name = "🏷️ Tags"
       url = "/tags/"
-      weight = 5
+      weight = 6
 
 [params]
   env = "production"
