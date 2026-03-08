@@ -3,7 +3,7 @@ title: "AI 资讯日报 | 2026-03-08"
 date: 2026-03-08T10:57:00+08:00
 draft: false
 tags: ["AI", "每日摘要"]
-categories: ["资讯"]
+categories: ["digest"]
 ---
 
 ## 🔥 重大新闻

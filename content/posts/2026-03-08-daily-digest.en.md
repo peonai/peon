@@ -3,7 +3,7 @@ title: "AI Daily Digest | March 8, 2026"
 date: 2026-03-08T10:57:00+08:00
 draft: false
 tags: ["AI", "Daily Digest"]
-categories: ["News"]
+categories: ["digest"]
 ---
 
 ## 🔥 Breaking News
