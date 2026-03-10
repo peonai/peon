@@ -1,5 +1,5 @@
 {
-  "lastPublishedDate": "2026-03-10",
+  "lastPublishedDate": "2026-03-11",
   "publishedUrls": [
     "https://simonwillison.net/2026/Mar/5/introducing-gpt54/",
     "https://www.wsj.com/tech/ai/pentagon-formally-labels-anthropic-supply-chain-risk-escalating-conflict-ebdf0523",
@@ -29,7 +29,17 @@
     "https://simonwillison.net/2026/Mar/9/production-query-plans-without-production-data/#atom-everything",
     "https://www.therundown.ai/p/openai-robotics-lead-exits-over-pentagon-deal",
     "https://blog.bytebytego.com/p/top-ai-github-repositories-in-2026",
-    "https://www.lennysnewsletter.com/p/the-most-successful-ai-company-youve-never-heard-of"
+    "https://www.lennysnewsletter.com/p/the-most-successful-ai-company-youve-never-heard-of",
+    "https://openai.com/index/instruction-hierarchy-challenge",
+    "https://openai.com/index/new-ways-to-learn-math-and-science-in-chatgpt",
+    "https://blog.google/products-and-platforms/products/workspace/gemini-google-sheets-state-of-the-art/",
+    "https://deepmind.google/blog/10-years-of-alphago/",
+    "https://simonwillison.net/guides/agentic-engineering-patterns/better-code/#atom-everything",
+    "https://simonwillison.net/2026/Mar/9/not-so-boring/#atom-everything",
+    "https://stratechery.com/2026/copilot-cowork-anthropics-integration-microsofts-new-bundle/",
+    "https://newsletter.pragmaticengineer.com/p/how-uber-uses-ai-for-development",
+    "https://blog.bytebytego.com/p/how-airbnb-rolled-out-20-local-payment",
+    "https://www.therundown.ai/p/anthropic-takes-us-government-to-court"
   ],
   "pending": []
 }
