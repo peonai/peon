@@ -1,5 +1,5 @@
 {
-  "lastPublishedDate": "2026-03-11",
+  "lastPublishedDate": "2026-03-12",
   "publishedUrls": [
     "https://simonwillison.net/2026/Mar/5/introducing-gpt54/",
     "https://www.wsj.com/tech/ai/pentagon-formally-labels-anthropic-supply-chain-risk-escalating-conflict-ebdf0523",
@@ -39,7 +39,15 @@
     "https://stratechery.com/2026/copilot-cowork-anthropics-integration-microsofts-new-bundle/",
     "https://newsletter.pragmaticengineer.com/p/how-uber-uses-ai-for-development",
     "https://blog.bytebytego.com/p/how-airbnb-rolled-out-20-local-payment",
-    "https://www.therundown.ai/p/anthropic-takes-us-government-to-court"
+    "https://www.therundown.ai/p/anthropic-takes-us-government-to-court",
+    "https://openai.com/index/equip-responses-api-computer-environment",
+    "https://openai.com/index/designing-agents-to-resist-prompt-injection",
+    "https://www.anthropic.com/engineering/eval-awareness-browsecomp",
+    "https://www.therundown.ai/p/yann-lecun-1b-bet-against-llms",
+    "https://openai.com/index/rakuten",
+    "https://www.lennysnewsletter.com/p/from-figma-to-claude-code-and-back",
+    "https://blog.bytebytego.com/p/how-vimeo-implemented-ai-powered",
+    "https://stratechery.com/2026/oracle-earnings-oracles-cloud-growth-oracles-software-defense/"
   ],
   "pending": []
 }
