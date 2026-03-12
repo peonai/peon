@@ -1,5 +1,5 @@
 {
-  "lastPublishedDate": "2026-03-12",
+  "lastPublishedDate": "2026-03-13",
   "publishedUrls": [
     "https://simonwillison.net/2026/Mar/5/introducing-gpt54/",
     "https://www.wsj.com/tech/ai/pentagon-formally-labels-anthropic-supply-chain-risk-escalating-conflict-ebdf0523",
@@ -47,7 +47,17 @@
     "https://openai.com/index/rakuten",
     "https://www.lennysnewsletter.com/p/from-figma-to-claude-code-and-back",
     "https://blog.bytebytego.com/p/how-vimeo-implemented-ai-powered",
-    "https://stratechery.com/2026/oracle-earnings-oracles-cloud-growth-oracles-software-defense/"
+    "https://stratechery.com/2026/oracle-earnings-oracles-cloud-growth-oracles-software-defense/",
+    "https://simonwillison.net/2026/Mar/12/coding-after-coders/#atom-everything",
+    "https://www.anthropic.com/engineering/building-a-c-compiler-with-a-team-of-parallel-claudes",
+    "https://arxiv.org/abs/2603.10521",
+    "https://news.ycombinator.com/item?id=47353957",
+    "https://github.com/jrswab/axe",
+    "https://openai.com/index/wayfair",
+    "https://blog.google/innovation-and-ai/technology/health/google-ai-heart-health-australia/",
+    "https://simonwillison.net/2026/Mar/11/sorting-algorithms/#atom-everything",
+    "https://newsletter.pragmaticengineer.com/p/from-ides-to-ai-agents-with-steve",
+    "https://blog.bytebytego.com/p/stateless-architecture-benefits-and"
   ],
   "pending": []
 }
