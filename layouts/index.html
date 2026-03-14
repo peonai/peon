@@ -1,0 +1,71 @@
+{{ define "main" }}
+{{ $lang := .Site.Language.Lang }}
+{{ $pages := where site.RegularPages "Type" "posts" }}
+{{ $pages = where $pages "Lang" $lang }}
+{{ $pages = where $pages "Params.hiddenInHomeList" "!=" true }}
+{{ $lead := index (first 1 $pages) 0 }}
+{{ $secondary := first 3 (after 1 $pages) }}
+{{ $briefs := first 6 (after 4 $pages) }}
+
+<section class="news-sheet page-shell">
+  <header class="sheet-masthead reveal reveal-1">
+    <div class="sheet-rule"></div>
+    <div class="sheet-meta-row">
+      <span>{{ cond (eq $lang "zh") "工坊日报" "The Peon Post" }}</span>
+      <span>{{ cond (eq $lang "zh") (now.Format "2006年01月02日") (now.Format "02 Jan 2006") }}</span>
+      <span>{{ cond (eq $lang "zh") "第壹号" "No. 1" }}</span>
+    </div>
+    <h1 class="sheet-nameplate">{{ cond (eq $lang "zh") "工 坊 日 报" "THE PEON POST" }}</h1>
+    <p class="sheet-tagline">{{ cond (eq $lang "zh") "产品进展、AI 思考与开发记录" "Product dispatches, AI essays, and development notes" }}</p>
+    <div class="sheet-nav-row">
+      <span>{{ cond (eq $lang "zh") "导读" "Guide" }}</span>
+      <a href="{{ "/" | relLangURL }}">{{ cond (eq $lang "zh") "头版" "Front Page" }}</a>
+      <a href="{{ "/posts/" | relLangURL }}">{{ cond (eq $lang "zh") "全部文章" "Archive" }}</a>
+      <a href="{{ "/categories/digest/" | relLangURL }}">{{ cond (eq $lang "zh") "摘要" "Digests" }}</a>
+      <a href="{{ "/categories/tech/" | relLangURL }}">{{ cond (eq $lang "zh") "技术" "Tech" }}</a>
+      <a href="{{ "/categories/thoughts/" | relLangURL }}">{{ cond (eq $lang "zh") "思考" "Thoughts" }}</a>
+    </div>
+    <div class="sheet-rule"></div>
+  </header>
+
+  <section class="front-grid reveal reveal-2">
+    <article class="lead-banner front-block">
+      <div class="block-label">{{ cond (eq $lang "zh") "头条" "Lead" }}</div>
+      {{ with $lead }}
+      <p class="story-label">{{ index .Params.categories 0 | default (cond (eq $lang "zh") "专题" "Feature") }}</p>
+      <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+      <div class="story-excerpt">{{ .Plain }}</div>
+      <div class="story-date">{{ .Date.Format (cond (eq $lang "zh") "2006年01月02日" "02 Jan 2006") }}</div>
+      {{ end }}
+    </article>
+
+    <section class="columns-band">
+      {{ range $secondary }}
+      {{ $summary := .Summary | plainify | strings.TrimSpace }}
+      {{ $plain := .Plain | plainify | strings.TrimSpace }}
+      {{ $body := cond (gt (len $summary) 0) $summary $plain }}
+      <article class="column-piece front-block fixed-height-card tall-card auto-fill-card">
+        <p class="story-label">{{ index .Params.categories 0 | default (cond (eq $.Site.Language.Lang "zh") "专栏" "Column") }}</p>
+        <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+        <div class="card-copy">{{ $body }}</div>
+      </article>
+      {{ end }}
+    </section>
+
+    <aside class="briefs-band front-block">
+      <div class="block-label">{{ cond (eq $lang "zh") "短讯" "Briefs" }}</div>
+      <div class="briefs-grid">
+        {{ range $briefs }}
+        {{ $summary := .Summary | plainify | strings.TrimSpace }}
+        {{ $plain := .Plain | plainify | strings.TrimSpace }}
+        {{ $body := cond (gt (len $summary) 0) $summary $plain }}
+        <article class="brief-item fixed-height-card brief-card auto-fill-card">
+          <h4><a href="{{ .RelPermalink }}">{{ .Title }}</a></h4>
+          <div class="card-copy">{{ $body }}</div>
+        </article>
+        {{ end }}
+      </div>
+    </aside>
+  </section>
+</section>
+{{ end }}

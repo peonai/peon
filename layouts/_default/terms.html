@@ -1,0 +1,29 @@
+{{ define "main" }}
+{{ $lang := .Site.Language.Lang }}
+{{ $terms := .Data.Terms.Alphabetical }}
+<main class="archive-sheet page-shell">
+  <header class="archive-banner reveal reveal-1">
+    <div class="sheet-meta-row archive-meta-row">
+      <span>{{ cond (eq $lang "zh") "工坊日报" "The Peon Post" }}</span>
+      <span>{{ .Title }}</span>
+      <span>{{ len $terms }} {{ cond (eq $lang "zh") "个条目" "terms" }}</span>
+    </div>
+    <div class="sheet-nav-row archive-nav-row">
+      <a href="{{ "/" | relLangURL }}">{{ cond (eq $lang "zh") "头版" "Front Page" }}</a>
+      <a href="{{ "/posts/" | relLangURL }}">{{ cond (eq $lang "zh") "全部文章" "Archive" }}</a>
+      <a href="{{ "/tags/" | relLangURL }}">{{ cond (eq $lang "zh") "标签" "Tags" }}</a>
+      <a href="{{ "/categories/" | relLangURL }}">{{ cond (eq $lang "zh") "栏目" "Categories" }}</a>
+    </div>
+  </header>
+
+  <section class="archive-grid reveal reveal-2">
+    {{ range $terms }}
+    <article class="archive-entry term-entry fixed-height-card archive-card">
+      <p class="story-label">{{ cond (eq $.Site.Language.Lang "zh") "索引" "Index" }}</p>
+      <h2><a href="{{ .Page.RelPermalink }}">{{ .Page.Title }}</a></h2>
+      <div class="card-copy">{{ .Count }} {{ cond (eq $.Site.Language.Lang "zh") "篇相关文章" "related stories" }}</div>
+    </article>
+    {{ end }}
+  </section>
+</main>
+{{ end }}

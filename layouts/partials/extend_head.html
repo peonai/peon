@@ -1,3 +1,14 @@
+<link rel="preconnect" href="https://fonts.loli.net">
+<link rel="preconnect" href="https://gstatic.loli.net" crossorigin>
+<script>
+document.documentElement.classList.add('preload');
+window.addEventListener('load', function () {
+  window.setTimeout(function () {
+    document.documentElement.classList.remove('preload');
+    document.documentElement.classList.add('page-ready');
+  }, 60);
+});
+</script>
 {{- /* Language auto-detection: redirect non-Chinese browsers to /en/ on first visit */ -}}
 {{- if and (eq .Site.Language.Lang "zh") .IsHome -}}
 <script>

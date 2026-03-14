@@ -1,0 +1,34 @@
+{{ define "main" }}
+{{ $lang := .Site.Language.Lang }}
+{{ $pages := .Paginator.Pages }}
+<main class="archive-sheet page-shell">
+  <header class="archive-banner reveal reveal-1">
+    <div class="sheet-meta-row archive-meta-row">
+      <span>{{ cond (eq $lang "zh") "工坊日报" "The Peon Post" }}</span>
+      <span>{{ .Title }}</span>
+      <span>{{ len $pages }} {{ cond (eq $lang "zh") "篇" "stories" }}</span>
+    </div>
+    <div class="sheet-nav-row archive-nav-row">
+      <a href="{{ "/" | relLangURL }}">{{ cond (eq $lang "zh") "头版" "Front Page" }}</a>
+      <a href="{{ "/posts/" | relLangURL }}">{{ cond (eq $lang "zh") "全部文章" "Archive" }}</a>
+      <a href="{{ "/categories/digest/" | relLangURL }}">{{ cond (eq $lang "zh") "摘要" "Digests" }}</a>
+      <a href="{{ "/categories/tech/" | relLangURL }}">{{ cond (eq $lang "zh") "技术" "Tech" }}</a>
+      <a href="{{ "/categories/thoughts/" | relLangURL }}">{{ cond (eq $lang "zh") "思考" "Thoughts" }}</a>
+    </div>
+  </header>
+
+  <section class="archive-grid reveal reveal-2">
+    {{ range $pages }}
+    {{ $summary := .Summary | plainify | strings.TrimSpace }}
+    {{ $plain := .Plain | plainify | strings.TrimSpace }}
+    {{ $body := cond (gt (len $summary) 0) $summary $plain }}
+    <article class="archive-entry fixed-height-card archive-card auto-fill-card">
+      <p class="story-label">{{ index .Params.categories 0 | default (cond (eq $.Site.Language.Lang "zh") "文章" "Story") }}</p>
+      <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+      <div class="card-copy">{{ $body }}</div>
+      <div class="story-date">{{ .Date.Format (cond (eq $lang "zh") "2006年01月02日" "02 Jan 2006") }}</div>
+    </article>
+    {{ end }}
+  </section>
+</main>
+{{ end }}
