@@ -1,5 +1,5 @@
 ---
-title: "📰 Daily Digest | 2026-03-15"
+title: "Daily Digest | 2026-03-15"
 date: 2026-03-15T09:41:00+08:00
 categories: ["digest"]
 tags: ["AI", "Claude", "Anthropic", "Dev Tools", "Open Source"]
@@ -7,7 +7,6 @@ tags: ["AI", "Claude", "Anthropic", "Dev Tools", "Open Source"]
 
 This digest covers news from March 13-15, 2026.
 
-## AI Products & Platforms
 
 ### Anthropic Launches Claude Partner Network with $100M Investment
 
@@ -70,7 +69,6 @@ Git's learning curve has always been steep. Many developers only know `git add`,
 
 ---
 
-## Technical Deep Dives
 
 ### Anthropic Engineering: Building a C Compiler with Parallel Claude Teams
 
@@ -111,7 +109,6 @@ Claude Code's multi-platform support is solid, covering developers' main work sc
 
 ---
 
-## Community & Products
 
 ### Lenny's Newsletter: Convincing Skeptical CTOs to Adopt AI Coding Tools
 
@@ -140,7 +137,6 @@ AI in cars is inevitable, but I'm more concerned about safety and privacy. In-ca
 
 ---
 
-## Open Source & Community
 
 ### Ageless Linux: Software for Humans of Indeterminate Age
 
