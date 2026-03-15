@@ -24,80 +24,11 @@
   </header>
 
   <div class="article-body reveal reveal-2 {{ if $isDigest }}digest-body{{ end }}">
-    {{ if $isDigest }}
-      {{ $parts := split .RawContent "## " }}
-      {{ $cards := slice }}
-      {{ range after 1 $parts }}
-        {{ $lines := split . "\n" }}
-        {{ $title := index $lines 0 | strings.TrimSpace }}
-        {{ $body := delimit (after 1 $lines) "\n" }}
-        {{ $sourceBody := replaceRE "(?s)^来源：(.+?)(\n\n|$)" "$1" $body | strings.TrimSpace }}
-        {{ $summaryBody := replaceRE "(?s)^来源：.+?(\n\n|$)" "" $body }}
-        {{ $opinion := replaceRE "(?s).*我的看法：" "" $summaryBody | strings.TrimSpace }}
-        {{ $facts := replaceRE "(?s)我的看法：.*$" "" $summaryBody | strings.TrimSpace }}
-        {{ $facts = cond (gt (len $facts) 0) $facts ($summaryBody | strings.TrimSpace) }}
-        {{ $cards = $cards | append (dict "title" $title "source" $sourceBody "facts" $facts "opinion" $opinion) }}
-      {{ end }}
-      {{ $lead := index $cards 0 }}
-      {{ $feature := first 2 (after 1 $cards) }}
-      {{ $briefs := after 3 $cards }}
-      <section class="digest-front">
-        {{ with $lead }}
-        <article class="digest-lead digest-card">
-          <div class="block-label">{{ cond (eq $lang "zh") "头条短讯" "Lead Brief" }}</div>
-          <h2>{{ .title }}</h2>
-          {{ if .source }}<p class="digest-source">来源：{{ .source | markdownify }}</p>{{ end }}
-          <div class="digest-facts">{{ .facts | markdownify }}</div>
-          {{ if .opinion }}
-          <div class="digest-opinion">
-            <div class="digest-opinion-label">{{ cond (eq $lang "zh") "编者短评" "Editor's Note" }}</div>
-            <p>{{ .opinion }}</p>
-          </div>
-          {{ end }}
-        </article>
-        {{ end }}
-
-        <section class="digest-feature-band">
-          {{ range $feature }}
-          <article class="digest-feature digest-card">
-            <div class="block-label">{{ cond (eq $lang "zh") "要闻" "Feature" }}</div>
-            <h2>{{ .title }}</h2>
-            {{ if .source }}<p class="digest-source">来源：{{ .source | markdownify }}</p>{{ end }}
-            <div class="digest-facts">{{ .facts | markdownify }}</div>
-            {{ if .opinion }}
-            <div class="digest-opinion compact-opinion">
-              <div class="digest-opinion-label">{{ cond (eq $lang "zh") "短评" "Commentary" }}</div>
-              <p>{{ .opinion }}</p>
-            </div>
-            {{ end }}
-          </article>
-          {{ end }}
-        </section>
-
-        <section class="digest-brief-grid">
-          {{ range $briefs }}
-          <article class="digest-brief digest-card">
-            <div class="block-label">{{ cond (eq $lang "zh") "短讯" "Brief" }}</div>
-            <h2>{{ .title }}</h2>
-            {{ if .source }}<p class="digest-source">来源：{{ .source | markdownify }}</p>{{ end }}
-            <div class="digest-facts">{{ .facts | markdownify }}</div>
-            {{ if .opinion }}
-            <div class="digest-opinion compact-opinion">
-              <div class="digest-opinion-label">{{ cond (eq $lang "zh") "短评" "Commentary" }}</div>
-              <p>{{ .opinion }}</p>
-            </div>
-            {{ end }}
-          </article>
-          {{ end }}
-        </section>
-      </section>
-    {{ else }}
-      <div class="post-content article-columns">
-        {{ if not (.Param "disableAnchoredHeadings") }}
-        {{ partial "anchored_headings.html" .Content }}
-        {{ else }}{{ .Content }}{{ end }}
-      </div>
-    {{ end }}
+    <div class="post-content article-columns">
+      {{ if not (.Param "disableAnchoredHeadings") }}
+      {{ partial "anchored_headings.html" .Content }}
+      {{ else }}{{ .Content }}{{ end }}
+    </div>
   </div>
 </article>
 {{ end }}
