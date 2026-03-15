@@ -676,3 +676,49 @@ body::before {
 .card-copy, .article-columns, .digest-facts, .digest-opinion p, .article-deck, .sheet-tagline {
   font-family: var(--font-serif-zh);
 }
+
+/* List styling for newspaper layout */
+.article-columns ul,
+.article-columns ol,
+.post-content ul,
+.post-content ol {
+  margin: 1.2em 0;
+  padding-left: 1.8em;
+}
+
+.article-columns ul li,
+.post-content ul li {
+  margin: 0.5em 0;
+  line-height: 1.72;
+  list-style-type: none;
+  position: relative;
+}
+
+.article-columns ul li::before,
+.post-content ul li::before {
+  content: '■';
+  position: absolute;
+  left: -1.4em;
+  color: var(--accent);
+  font-size: 0.65em;
+  line-height: 2.4;
+}
+
+.article-columns ol li,
+.post-content ol li {
+  margin: 0.5em 0;
+  line-height: 1.72;
+  padding-left: 0.3em;
+}
+
+.article-columns ul ul li::before,
+.post-content ul ul li::before {
+  content: '□';
+  font-size: 0.7em;
+}
+
+.article-columns ul ul ul li::before,
+.post-content ul ul ul li::before {
+  content: '▪';
+  font-size: 0.6em;
+}
