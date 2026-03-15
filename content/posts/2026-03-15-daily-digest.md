@@ -11,11 +11,13 @@ tags: ["AI", "Claude", "Anthropic", "开发工具", "开源"]
 
 来源：https://www.anthropic.com/news/claude-partner-network
 
-Anthropic 启动了 Claude Partner Network，初期投入 1 亿美元。合作伙伴能拿到技术认证、专属技术支持和联合市场开发资源。
+Anthropic 启动了 Claude Partner Network，初期投入 1 亿美元。这个合作伙伴网络面向咨询公司、系统集成商和 AI 专业机构，提供技术认证、专属技术支持和联合市场开发资源。合作伙伴可以获得 Anthropic 的官方认证，符合条件的还能拿到投资支持。
 
-这个网络覆盖大型咨询公司、专业服务公司和 AI 专业机构。Claude 现在是唯一同时上了 AWS、Google Cloud 和 Microsoft 三家云平台的前沿模型。
+这个网络的推出时机很关键。Claude 现在是唯一同时上了 AWS、Google Cloud 和 Microsoft 三家云平台的前沿模型，这种多云覆盖能力让合作伙伴在服务企业客户时有更大的灵活性。Anthropic 的策略是通过合作伙伴网络快速渗透企业市场，而不是像 OpenAI 和 Google 那样主要依赖自己的销售团队。
 
-我的看法：这是 Anthropic 商业化的重要信号。OpenAI 和 Google 主要靠自己的销售团队打企业市场，Anthropic 选择借力合作伙伴网络。如果能撬动咨询公司和系统集成商的资源，ROI 应该不错。
+1 亿美元的投入覆盖培训、认证、市场开发和技术支持。这笔钱不是简单的补贴，而是在建立一个生态系统——让咨询公司和系统集成商有动力把 Claude 推荐给他们的企业客户。
+
+我的看法：这是 Anthropic 商业化的重要信号。OpenAI 和 Google 主要靠自己的销售团队打企业市场，Anthropic 选择借力合作伙伴网络。如果能撬动咨询公司和系统集成商的资源，ROI 应该不错。这个策略的关键在于合作伙伴的质量和执行力——如果合作伙伴只是挂个牌子不干活，1 亿美元就打水漂了。
 
 ---
 
