@@ -1,11 +1,9 @@
 ---
-title: "每日资讯 | 2026-03-15"
+title: "Anthropic 砸 1 亿美元建合作伙伴网络，Claude 开放百万 token 上下文"
 date: 2026-03-15T09:41:00+08:00
 categories: ["digest"]
 tags: ["AI", "Claude", "Anthropic", "开发工具", "开源"]
-
 ---
-
 
 本期涵盖 3 月 13 日至 3 月 15 日的资讯。
 
