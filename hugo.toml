@@ -142,6 +142,8 @@ buildExpired = false
   hidemeta = false
   hideSummary = false
   showtoc = false
+  disableLangToggle = false
+  displayFullLangName = true
 
   [params.opengraph]
     title = "The Peon Post"
