@@ -73,9 +73,35 @@ While tossing old rules, some new ones should be established:
 
 **Context boundary declarations.** AI's context window when generating code is limited. If a function depends on logic outside that window, AI might make wrong assumptions. Marking "this logic depends on X module's Y behavior" in code helps AI not screw up next time it modifies things.
 
+## The Extreme Case: What If You Never Plan to Review?
+
+Everything above has one hidden assumption—humans will still read this code at some point.
+
+But in reality, a lot of projects? Nobody's going to look.
+
+Internal tools, one-off scripts, data migrations, prototype validation, personal projects—these don't touch security, don't handle user data, and if they break you just regenerate. Do you really need comments, split functions, and DRY compliance for a throwaway ETL script?
+
+No.
+
+If humans never plan to review the code, traditional code standards can almost entirely go. Naming? As long as AI can read it. Function length? Doesn't matter. Comments? For whom? Design patterns? Overkill.
+
+At that point, only two standards remain:
+
+**First, it runs.** Tests pass, output is correct, no crashes. Code can be ugly as sin—if it works, it works. AI generates, AI verifies, humans only check results.
+
+**Second, it's regenerable.** Instead of spending time making code "maintainable," make sure you can regenerate it from the same prompt. Code becomes disposable. The prompt is the real source code. Broken? Don't fix it. Regenerate.
+
+Sounds crazy, but think about it—we're already doing this. How many people follow code standards when writing shell scripts? How many write unit tests for SQL queries? This "use and toss" code has always existed, just in smaller quantities. AI amplified it tenfold.
+
+The boundary matters, of course. "Not planning to review" doesn't mean "not responsible." Code touching user data, payments, or access control—even in a small project—can't use this mindset. But an internal dashboard, a log analysis script, a little tool that batch-renames files? Let it go.
+
+The scope where code standards apply is shrinking. Not because standards are bad, but because more and more code simply isn't worth being "standardized."
+
 ## Bottom Line
 
 Code standards were never the goal—they're the means. Means serve the goal, which is writing usable, maintainable code.
+
+But "maintainable" itself is being redefined. Some code doesn't need maintenance—it just needs to be regenerable.
 
 The entity writing code changed, so the means must change too. Rigidly following "functions under 20 lines" is like rigidly following "code must be handwritten"—both turn means into dogma.
 
