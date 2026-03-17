@@ -13,7 +13,7 @@
     <div class="sheet-meta-row">
       <span>{{ cond (eq $lang "zh") "工坊日报" "The Peon Post" }}</span>
       <span>{{ cond (eq $lang "zh") (now.Format "2006年01月02日") (now.Format "02 Jan 2006") }}</span>
-      <span>{{ cond (eq $lang "zh") "第壹号" "No. 1" }}</span>
+      <span>{{ cond (eq $lang "zh") "第壹号" "No. 1" }}{{- if .IsTranslated }}{{ range .Translations }} · <a href="{{ .Permalink }}">{{ .Language.LanguageName }}</a>{{ end }}{{ end }}</span>
     </div>
     <h1 class="sheet-nameplate">{{ cond (eq $lang "zh") "工 坊 日 报" "THE PEON POST" }}</h1>
     <p class="sheet-tagline">{{ cond (eq $lang "zh") "产品进展、AI 思考与开发记录" "Product dispatches, AI essays, and development notes" }}</p>
