@@ -14,6 +14,7 @@
       {{ if $isDigest }}<a href="{{ "/categories/digest/" | relLangURL }}">{{ cond (eq $lang "zh") "每日资讯" "Daily Digest" }}</a>{{ end }}
     </div>
     <h1 class="article-nameplate">{{ .Title }}</h1>
+    {{- partial "translation_list.html" . -}}
     {{ if and $isDigest .Content }}
       {{ $parts := split .RawContent "## " }}
       {{ $intro := index $parts 0 | plainify | strings.TrimSpace }}

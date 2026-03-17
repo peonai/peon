@@ -1,5 +1,5 @@
 {
-  "lastPublishedDate": "2026-03-13",
+  "lastPublishedDate": "2026-03-17",
   "publishedUrls": [
     "https://simonwillison.net/2026/Mar/5/introducing-gpt54/",
     "https://www.wsj.com/tech/ai/pentagon-formally-labels-anthropic-supply-chain-risk-escalating-conflict-ebdf0523",
@@ -57,7 +57,21 @@
     "https://blog.google/innovation-and-ai/technology/health/google-ai-heart-health-australia/",
     "https://simonwillison.net/2026/Mar/11/sorting-algorithms/#atom-everything",
     "https://newsletter.pragmaticengineer.com/p/from-ides-to-ai-agents-with-steve",
-    "https://blog.bytebytego.com/p/stateless-architecture-benefits-and"
+    "https://blog.bytebytego.com/p/stateless-architecture-benefits-and",
+    "https://nvidianews.nvidia.com/news/nvidia-launches-vera-cpu-purpose-built-for-agentic-ai",
+    "https://www.therundown.ai/p/musk-takes-xai-into-a-full-rebuild",
+    "https://blog.bytebytego.com/p/how-stripes-minions-ship-1300-prs",
+    "https://stratechery.com/2026/agents-over-bubbles/",
+    "https://simonwillison.net/2026/Mar/16/codex-subagents/#atom-everything",
+    "https://simonwillison.net/guides/agentic-engineering-patterns/how-coding-agents-work/#atom-everything",
+    "https://simonwillison.net/2026/Mar/16/coding-agents-for-data-analysis/#atom-everything",
+    "https://simonwillison.net/guides/agentic-engineering-patterns/what-is-agentic-engineering/#atom-everything",
+    "https://mistral.ai/news/leanstral",
+    "https://tldr.tech/ai/2026-03-16",
+    "https://tldr.tech/tech/2026-03-16",
+    "https://www.lennysnewsletter.com/p/from-journalist-to-ios-developer",
+    "https://blog.bytebytego.com/p/ep206-git-workflow-essential-commands",
+    "https://openai.com/index/why-codex-security-doesnt-include-sast"
   ],
   "pending": []
 }
