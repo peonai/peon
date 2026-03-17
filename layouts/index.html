@@ -19,7 +19,6 @@
     <p class="sheet-tagline">{{ cond (eq $lang "zh") "产品进展、AI 思考与开发记录" "Product dispatches, AI essays, and development notes" }}</p>
     <div class="sheet-nav-row">
       <span>{{ cond (eq $lang "zh") "导读" "Guide" }}</span>
-      <a href="{{ "/" | relLangURL }}">{{ cond (eq $lang "zh") "头版" "Front Page" }}</a>
       <a href="{{ "/posts/" | relLangURL }}">{{ cond (eq $lang "zh") "全部文章" "Archive" }}</a>
       <a href="{{ "/categories/digest/" | relLangURL }}">{{ cond (eq $lang "zh") "摘要" "Digests" }}</a>
       <a href="{{ "/categories/tech/" | relLangURL }}">{{ cond (eq $lang "zh") "技术" "Tech" }}</a>
