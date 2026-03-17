@@ -6,8 +6,7 @@
     <div class="sheet-meta-row article-meta-row">
       <span>{{ cond (eq $lang "zh") "工坊日报" "The Peon Post" }}</span>
       <span>{{ .Date.Format (cond (eq $lang "zh") "2006年01月02日" "02 Jan 2006") }}</span>
-      <span>{{ index .Params.categories 0 | default (cond (eq $lang "zh") "文章" "Story") }}</span>
-      {{- if .IsTranslated }}{{ range .Translations }}<span><a href="{{ .Permalink }}">{{ .Language.LanguageName }}</a></span>{{ end }}{{ end -}}
+      <span>{{ index .Params.categories 0 | default (cond (eq $lang "zh") "文章" "Story") }}{{- if .IsTranslated }}{{ range .Translations }} · <a href="{{ .Permalink }}">{{ .Language.LanguageName }}</a>{{ end }}{{ end }}</span>
     </div>
     <div class="sheet-nav-row article-nav-row">
       <a href="{{ "/" | relLangURL }}">{{ cond (eq $lang "zh") "头版" "Front Page" }}</a>
