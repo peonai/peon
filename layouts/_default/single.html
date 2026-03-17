@@ -7,6 +7,7 @@
       <span>{{ cond (eq $lang "zh") "工坊日报" "The Peon Post" }}</span>
       <span>{{ .Date.Format (cond (eq $lang "zh") "2006年01月02日" "02 Jan 2006") }}</span>
       <span>{{ index .Params.categories 0 | default (cond (eq $lang "zh") "文章" "Story") }}</span>
+      {{- if .IsTranslated }}{{ range .Translations }}<span><a href="{{ .Permalink }}">{{ .Language.LanguageName }}</a></span>{{ end }}{{ end -}}
     </div>
     <div class="sheet-nav-row article-nav-row">
       <a href="{{ "/" | relLangURL }}">{{ cond (eq $lang "zh") "头版" "Front Page" }}</a>
@@ -14,7 +15,6 @@
       {{ if $isDigest }}<a href="{{ "/categories/digest/" | relLangURL }}">{{ cond (eq $lang "zh") "每日资讯" "Daily Digest" }}</a>{{ end }}
     </div>
     <h1 class="article-nameplate">{{ .Title }}</h1>
-    {{- partial "translation_list.html" . -}}
     {{ if and $isDigest .Content }}
       {{ $parts := split .RawContent "## " }}
       {{ $intro := index $parts 0 | plainify | strings.TrimSpace }}
