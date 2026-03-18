@@ -31,7 +31,9 @@
     <article class="lead-banner front-block">
       <div class="block-label">{{ cond (eq $lang "zh") "头条" "Lead" }}</div>
       {{ with $lead }}
-      <p class="story-label">{{ index .Params.categories 0 | default (cond (eq $lang "zh") "专题" "Feature") }}</p>
+      {{ $cat := index .Params.categories 0 | default "feature" }}
+      {{ $catLabel := cond (eq $lang "zh") (cond (eq $cat "digest") "摘要" (cond (eq $cat "tech") "技术" (cond (eq $cat "thoughts") "思考" "专题"))) $cat }}
+      <p class="story-label">{{ $catLabel }}</p>
       <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
       <div class="story-excerpt">{{ .Plain }}</div>
       <div class="story-date">{{ .Date.Format (cond (eq $lang "zh") "2006年01月02日" "02 Jan 2006") }}</div>
@@ -43,8 +45,10 @@
       {{ $summary := .Summary | plainify | strings.TrimSpace }}
       {{ $plain := .Plain | plainify | strings.TrimSpace }}
       {{ $body := cond (gt (len $summary) 0) $summary $plain }}
+      {{ $cat := index .Params.categories 0 | default "column" }}
+      {{ $catLabel := cond (eq $.Site.Language.Lang "zh") (cond (eq $cat "digest") "摘要" (cond (eq $cat "tech") "技术" (cond (eq $cat "thoughts") "思考" "专栏"))) $cat }}
       <article class="column-piece front-block fixed-height-card tall-card auto-fill-card">
-        <p class="story-label">{{ index .Params.categories 0 | default (cond (eq $.Site.Language.Lang "zh") "专栏" "Column") }}</p>
+        <p class="story-label">{{ $catLabel }}</p>
         <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
         <div class="card-copy">{{ $body }}</div>
       </article>

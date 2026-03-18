@@ -202,6 +202,7 @@ body::before {
 .front-grid {
   display: grid;
   grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-template-rows: auto 1fr auto;
   gap: 22px 20px;
 }
 
@@ -227,25 +228,33 @@ body::before {
 }
 
 .tall-card .card-copy {
-  min-height: 18.8rem;
   -webkit-line-clamp: 13;
 }
 
 .brief-card .card-copy,
 .archive-card .card-copy {
-  min-height: 11.2rem;
   -webkit-line-clamp: 8;
 }
 
 .lead-banner {
   grid-column: 1 / span 8;
+  grid-row: 1 / 2;
   border-top: 3px solid var(--primary);
   border-bottom: 2px solid var(--border-strong);
   padding: 28px 0 26px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.story-excerpt {
+  flex: 1;
+  overflow: hidden;
 }
 
 .columns-band {
   grid-column: 9 / span 4;
+  grid-row: 1 / 2;
   display: grid;
   gap: 20px;
   border-top: 3px solid var(--primary);
