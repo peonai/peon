@@ -4,8 +4,8 @@
 {{ $pages = where $pages "Lang" $lang }}
 {{ $pages = where $pages "Params.hiddenInHomeList" "!=" true }}
 {{ $lead := index (first 1 $pages) 0 }}
-{{ $secondary := first 3 (after 1 $pages) }}
-{{ $briefs := first 6 (after 4 $pages) }}
+{{ $secondary := first 5 (after 1 $pages) }}
+{{ $briefs := first 9 (after 6 $pages) }}
 
 <section class="news-sheet page-shell">
   <header class="sheet-masthead reveal reveal-1">

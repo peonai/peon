@@ -1,9 +1,9 @@
-@import url('https://fonts.loli.net/css2?family=Noto+Sans+SC:wght@400;500;700&family=Zhi+Mang+Xing&display=swap');
+@import url('https://fonts.loli.net/css2?family=Noto+Serif+SC:wght@400;500;600;700&family=Zhi+Mang+Xing&display=swap');
 
 :root {
-  --font-ui-zh: 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif;
-  --font-serif-zh: 'Source Han Serif SC', 'Source Han Serif CN', 'STSong', 'Songti SC', 'SimSun', serif;
-  --font-title-zh: 'Source Han Serif SC', 'Source Han Serif CN', 'STSong', 'Songti SC', 'SimSun', serif;
+  --font-ui-zh: 'Noto Serif SC', 'Source Han Serif SC', 'Source Han Serif CN', 'STSong', 'Songti SC', serif;
+  --font-serif-zh: 'Noto Serif SC', 'Source Han Serif SC', 'Source Han Serif CN', 'STSong', 'Songti SC', serif;
+  --font-title-zh: 'Noto Serif SC', 'Source Han Serif SC', 'Source Han Serif CN', 'STSong', 'Songti SC', serif;
   --font-accent-zh: 'Zhi Mang Xing', 'KaiTi', cursive;
   --font-mono: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', 'Consolas', monospace;
 }
