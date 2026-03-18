@@ -631,13 +631,13 @@ body::before {
 
 @media (max-width: 760px) {
   .main {
-    padding: 20px 14px 70px;
+    padding: 20px 10px 70px;
   }
 
   .news-sheet,
   .article-sheet,
   .archive-sheet {
-    padding: 18px 16px 22px;
+    padding: 14px 12px 20px;
   }
 
   .sheet-meta-row,
@@ -648,8 +648,12 @@ body::before {
   }
 
   .sheet-nameplate {
-    font-size: 3rem;
-    letter-spacing: 0.12em;
+    font-size: 2.4rem;
+    letter-spacing: 0.08em;
+  }
+
+  .sheet-tagline {
+    font-size: 0.88rem;
   }
 
   .front-grid,
@@ -658,7 +662,7 @@ body::before {
   .digest-brief-grid,
   .archive-grid {
     grid-template-columns: 1fr;
-    gap: 18px;
+    gap: 16px;
   }
 
   .lead-banner,
@@ -671,14 +675,64 @@ body::before {
     grid-column: auto;
   }
 
+  .lead-banner {
+    padding: 18px 0 16px;
+  }
+
+  .lead-banner h2 {
+    font-size: 1.8rem;
+    line-height: 1.18;
+    margin-bottom: 14px;
+  }
+
+  .story-excerpt {
+    column-count: 1;
+    max-height: 12rem;
+    font-size: 0.95rem;
+    margin-top: 12px;
+  }
+
   .story-summary {
     max-width: none;
   }
 
-  .tall-card .card-copy,
+  .columns-band {
+    padding-top: 16px;
+    gap: 14px;
+  }
+
+  .column-piece h3 {
+    font-size: 1.25rem;
+  }
+
+  .tall-card .card-copy {
+    -webkit-line-clamp: 5;
+  }
+
   .brief-card .card-copy,
   .archive-card .card-copy {
+    -webkit-line-clamp: 4;
     min-height: auto;
+  }
+
+  .brief-item h4 {
+    font-size: 1.05rem;
+  }
+
+  .article-nameplate {
+    font-size: 2rem;
+  }
+
+  .article-columns {
+    column-count: 1;
+  }
+
+  .digest-card h2 {
+    font-size: 1.3rem;
+  }
+
+  .digest-lead h2 {
+    font-size: 1.6rem;
   }
 }
 
