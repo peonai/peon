@@ -631,7 +631,7 @@ body::before {
 
 @media (max-width: 760px) {
   .main {
-    padding: 20px 10px 70px;
+    padding: 16px 10px 60px;
   }
 
   .news-sheet,
@@ -648,25 +648,28 @@ body::before {
   }
 
   .sheet-nameplate {
-    font-size: 2.4rem;
+    font-size: 2.2rem;
     letter-spacing: 0.08em;
   }
 
   .sheet-tagline {
-    font-size: 0.88rem;
+    font-size: 0.85rem;
   }
 
+  /* Kill all grids — pure linear flow */
   .front-grid,
   .briefs-grid,
   .digest-front,
   .digest-brief-grid,
   .archive-grid {
-    grid-template-columns: 1fr;
-    gap: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
   }
 
   .lead-banner,
   .columns-band,
+  .briefs-band,
   .brief-item,
   .digest-lead,
   .digest-feature-band,
@@ -675,52 +678,111 @@ body::before {
     grid-column: auto;
   }
 
-  .lead-banner {
-    padding: 18px 0 16px;
+  /* Every article block: uniform card style */
+  .lead-banner,
+  .column-piece,
+  .brief-item {
+    border-top: 1px solid var(--border);
+    border-bottom: none;
+    padding: 16px 0;
+  }
+
+  .lead-banner:first-child {
+    border-top: 2px solid var(--primary);
   }
 
   .lead-banner h2 {
-    font-size: 1.8rem;
-    line-height: 1.18;
-    margin-bottom: 14px;
+    font-size: 1.6rem;
+    line-height: 1.22;
+    margin-bottom: 10px;
   }
 
   .story-excerpt {
     column-count: 1;
-    max-height: 12rem;
+    max-height: none;
     font-size: 0.95rem;
-    margin-top: 12px;
+    margin-top: 8px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 10;
   }
 
   .story-summary {
     max-width: none;
   }
 
+  .story-date {
+    margin-top: 6px;
+    font-size: 0.75rem;
+  }
+
+  /* Columns band: linear stack */
   .columns-band {
-    padding-top: 16px;
-    gap: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    padding-top: 0;
+    border-top: none;
+  }
+
+  .column-piece {
+    border-top: 1px solid var(--border);
+    border-bottom: none;
+    padding: 16px 0;
+  }
+
+  .column-piece:last-child {
+    border-bottom: none;
+    padding-bottom: 16px;
   }
 
   .column-piece h3 {
-    font-size: 1.25rem;
+    font-size: 1.2rem;
+    margin-bottom: 6px;
   }
 
-  .tall-card .card-copy {
-    -webkit-line-clamp: 5;
+  /* Briefs band: no special treatment */
+  .briefs-band {
+    border-top: none;
+    padding-top: 0;
+    margin-top: 0;
   }
 
-  .brief-card .card-copy,
-  .archive-card .card-copy {
-    -webkit-line-clamp: 4;
-    min-height: auto;
+  .briefs-band > .block-label {
+    display: none;
   }
 
   .brief-item h4 {
-    font-size: 1.05rem;
+    font-size: 1.1rem;
+    margin-bottom: 6px;
+  }
+
+  /* All card copy: uniform clamp */
+  .tall-card .card-copy,
+  .brief-card .card-copy,
+  .archive-card .card-copy,
+  .card-copy {
+    -webkit-line-clamp: 3;
+    min-height: auto;
+    font-size: 0.92rem;
+    line-height: 1.65;
+  }
+
+  /* Story labels: smaller */
+  .story-label {
+    font-size: 0.7rem;
+    margin-bottom: 8px;
+    padding: 2px 8px;
+  }
+
+  .block-label {
+    font-size: 0.72rem;
+    margin-bottom: 8px;
   }
 
   .article-nameplate {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 
   .article-columns {
@@ -732,7 +794,7 @@ body::before {
   }
 
   .digest-lead h2 {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
   }
 }
 
