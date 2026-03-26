@@ -1,6 +1,14 @@
 {
-  "lastPublishedDate": "2026-03-25",
+  "lastPublishedDate": "2026-03-27",
   "publishedUrls": [
+    "https://openai.com/index/our-approach-to-the-model-spec",
+    "https://openai.com/index/safety-bug-bounty",
+    "https://deepmind.google/blog/gemini-3-1-flash-live-making-audio-ai-more-natural-and-reliable/",
+    "https://www.anthropic.com/engineering/claude-code-auto-mode",
+    "https://www.anthropic.com/research/economic-index-march-2026-report",
+    "https://simonwillison.net/2026/Mar/26/quantization-from-the-ground-up/",
+    "https://simonwillison.net/2026/Mar/25/thoughts-on-slowing-the-fuck-down/",
+    "https://simonwillison.net/2026/Mar/25/litellm-hack/",
     "https://openai.com/index/creating-with-sora-safely",
     "https://simonwillison.net/2026/Mar/22/pcgamer-audit/",
     "https://simonwillison.net/2026/Mar/23/starlette-1-skill/",
@@ -100,24 +108,4 @@
     "https://tldr.tech/tech/2026-03-19",
     "https://simonwillison.net/2026/Mar/18/llm-in-a-flash/",
     "https://blog.skypilot.co/scaling-autoresearch/",
-    "https://esolang-bench.vercel.app/",
-    "https://qlabs.sh/10x",
-    "https://electrek.co/2026/03/19/xiaomi-launches-next-gen-su7-902-km-range-undercuts-tesla/",
-    "https://tldr.tech/tech/2026-03-20",
-    "https://tldr.tech/ai/2026-03-20",
-    "https://simonwillison.net/2026/Mar/20/cursor-on-kimi/",
-    "https://newsletter.pragmaticengineer.com/p/are-ai-agents-actually-slowing-us",
-    "https://www.therundown.ai/p/how-81k-people-really-feel-about-ai",
-    "https://nikomatsakis.github.io/rust-project-perspectives-on-ai/feb27-summary.html",
-    "https://simonwillison.net/guides/agentic-engineering-patterns/using-git-with-coding-agents/",
-    "https://christophermeiklejohn.com/ai/zabriskie/development/android/ios/2026/03/22/teaching-claude-to-qa-a-mobile-app.html",
-    "https://bramcohen.com/p/manyana",
-    "https://simonwillison.net/2026/Mar/21/profiling-hacker-news-users/",
-    "https://blog.mozilla.ai/cq-stack-overflow-for-agents/",
-    "https://simonwillison.net/2026/Mar/22/starlette/",
-    "https://simonwillison.net/2026/Mar/22/javascript-sandboxing-research/",
-    "https://blog.bytebytego.com/p/how-agentic-rag-works",
-    "https://neilkakkar.com/productive-with-claude-code.html"
-  ],
-  "pending": []
-}
+    "https://esolang-b
