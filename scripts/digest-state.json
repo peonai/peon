@@ -1,6 +1,31 @@
 {
-  "lastPublishedDate": "2026-04-04",
+  "lastPublishedDate": "2026-04-12",
   "publishedUrls": [
+    "https://www.latent.space/p/ainews-anthropic-30b-arr-project",
+    "https://www.anthropic.com/glasswing",
+    "https://thenextweb.com/news/google-deepmind-hassabis-startup-pace",
+    "https://techcrunch.com/2026/04/11/nvidia-backed-sifive-hits-3-65-billion-valuation-for-open-ai-chips/",
+    "https://siliconangle.com/2026/04/10/ai-training-data-startup-afterquery-nabs-30m-investment/",
+    "https://simonwillison.net/2026/Apr/11/sqlite/",
+    "https://simonwillison.net/2026/Apr/8/muse-spark/",
+    "https://news.ycombinator.com/item?id=47673541",
+    "https://blog.peonai.net/posts/2026-04-12-daily-digest",
+    "https://blog.peonai.net/posts/2026-04-12-daily-digest.en",
+    "https://www.coreweave.com/news/coreweave-and-meta-announce-21-billion-expanded-ai-infrastructure-agreement",
+    "https://www.cnbc.com/2026/04/06/broadcom-agrees-to-expanded-chip-deals-with-google-anthropic.html",
+    "https://www.anthropic.com/claude-mythos-preview-system-card",
+    "https://www.straitstimes.com/business/companies-markets/openai-anthropic-google-unite-to-combat-ai-model-copying-in-china",
+    "https://openai.com/index/industrial-policy-for-the-intelligence-age/",
+    "https://www.emarketer.com/content/gemini-gains-ground-chatgpt-25-dau-share-claude-churn-drops",
+    "https://www.anthropic.com/glasswing",
+    "https://www.anthropic.com/news/google-broadcom-partnership-compute",
+    "https://www.testingcatalog.com/openai-tests-next-gen-image-v2-model-on-chatgpt-and-lm-arena/",
+    "https://www.testingcatalog.com/google-prepares-jules-v2-agent-capable-of-taking-bigger-tasks/",
+    "https://z.ai/blog/glm-5.1",
+    "https://sherwood.news/tech/report-some-of-metas-new-ai-models-will-eventually-be-open-source/",
+    "https://cursor.com/blog/warp-decode",
+    "https://blog.peonai.net/posts/2026-04-09-daily-digest",
+    "https://blog.peonai.net/posts/2026-04-09-daily-digest.en",
     "https://www.latent.space/p/ainews-gemma-4-the-best-small-multimodal",
     "https://www.firstpost.com/tech/google-launches-gemma-4-calls-it-the-most-intelligent-open-model-what-is-it-and-how-to-use-13996057.html",
     "https://www.pymnts.com/acquisitions/2026/openai-buys-tech-talk-show-tbpn-in-media-expansion/",
@@ -96,5 +121,7 @@
     "https://deepmind.google/blog/gemini-3-1-flash-lite-built-for-intelligence-at-scale/",
     "https://www.anthropic.com/research/labor-market-impacts",
     "https://simonwillison.net/2026/Mar/5/chardet/",
-    "https://simonwillison.net/guides/agentic-engineering-patterns/anti-patterns/",
-    "https://simonwill
+    "https://simonwillison.net/guides/agentic-engineering-patterns/anti-patterns/"
+  ],
+  "pending": []
+}
