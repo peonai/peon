@@ -1,7 +1,6 @@
 {
-  "lastPublishedDate": "2026-04-12",
+  "lastPublishedDate": "2026-04-13",
   "publishedUrls": [
-    "https://www.latent.space/p/ainews-anthropic-30b-arr-project",
     "https://www.anthropic.com/glasswing",
     "https://thenextweb.com/news/google-deepmind-hassabis-startup-pace",
     "https://techcrunch.com/2026/04/11/nvidia-backed-sifive-hits-3-65-billion-valuation-for-open-ai-chips/",
@@ -17,7 +16,6 @@
     "https://www.straitstimes.com/business/companies-markets/openai-anthropic-google-unite-to-combat-ai-model-copying-in-china",
     "https://openai.com/index/industrial-policy-for-the-intelligence-age/",
     "https://www.emarketer.com/content/gemini-gains-ground-chatgpt-25-dau-share-claude-churn-drops",
-    "https://www.anthropic.com/glasswing",
     "https://www.anthropic.com/news/google-broadcom-partnership-compute",
     "https://www.testingcatalog.com/openai-tests-next-gen-image-v2-model-on-chatgpt-and-lm-arena/",
     "https://www.testingcatalog.com/google-prepares-jules-v2-agent-capable-of-taking-bigger-tasks/",
@@ -57,7 +55,6 @@
     "https://newsletter.pragmaticengineer.com/p/the-future-of-software-engineering-with-ai",
     "https://newsletter.pragmaticengineer.com/p/how-codex-is-built",
     "https://newsletter.pragmaticengineer.com/p/mitchell-hashimoto",
-    "https://simonwillison.net/",
     "https://techcrunch.com/2026/03/30/anthropics-claude-gaining-paid-subscribers-in-record-numbers/",
     "https://stocktwits.com/news-articles/markets/equity/anthropic-s-paid-users-reportedly-doubled-ahead-of-ipo",
     "https://www.csoonline.com/article/4151801/leak-reveals-anthropics-mythos-a-powerful-ai-model-aimed-at-cybersecurity-use-cases.html",
@@ -104,7 +101,7 @@
     "https://tldr.tech/tech/2026-03-17",
     "https://simonwillison.net/2026/Mar/5/introducing-gpt54/",
     "https://www.wsj.com/tech/ai/pentagon-formally-labels-anthropic-supply-chain-risk-escalating-conflict-ebdf0523",
-    "https://www.reddit.com/r/claude/comments/1rkx77h/new_auto_mode_permissions_coming/",
+    "https://www.reddit.com/r/claude/comments/1rkx77h/new-auto-mode-permissions-coming/",
     "https://simonwillison.net/2026/Mar/7/codex-for-open-source/",
     "https://developers.openai.com/codex/community/codex-for-oss",
     "https://www.bloomberg.com/news/articles/2026-03-05/brain-tech-startup-science-corp-raises-230-million-to-treat-blindness",
@@ -121,7 +118,17 @@
     "https://deepmind.google/blog/gemini-3-1-flash-lite-built-for-intelligence-at-scale/",
     "https://www.anthropic.com/research/labor-market-impacts",
     "https://simonwillison.net/2026/Mar/5/chardet/",
-    "https://simonwillison.net/guides/agentic-engineering-patterns/anti-patterns/"
+    "https://simonwillison.net/guides/agentic-engineering-patterns/anti-patterns/",
+    "https://www.therundown.ai/p/anthropic-claude-remote-computer-use-dispatch",
+    "https://help.openai.com/en/articles/9793128-about-chatgpt-pro-plans",
+    "https://claude.com/blog/cowork-for-enterprise",
+    "https://www.cnbc.com/2026/04/09/meta-commits-to-spending-additional-21-billion-with-coreweave-.html",
+    "https://www.cnbc.com/2026/04/09/openai-slams-anthropic-in-memo-to-shareholders-as-rival-ai-gains-momentum.html",
+    "https://lumalabs.ai/uni-1",
+    "https://decrypt.co/363837/googles-paperorchestra-ai-converts-lab-notes-into-publication-ready-research-papers",
+    "https://vercel.com/blog/agentic-infrastructure",
+    "https://blog.peonai.net/posts/2026-04-13-daily-digest",
+    "https://blog.peonai.net/posts/2026-04-13-daily-digest.en"
   ],
   "pending": []
 }
