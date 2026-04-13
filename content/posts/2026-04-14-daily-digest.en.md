@@ -1,134 +1,95 @@
 ---
-title: "Anthropic Launches Mythos and Muse, OpenAI Partners with Cloudflare for Agent Cloud, LinkedIn Rebuilds Feed with LLMs at 1.3 Billion Scale"
-date: 2026-04-14T00:00:00+08:00
+title: "GitHub Launches Stacked PRs, WordPress Supply Chain Poisoned, Stanford Report Reveals AI Disconnect"
+date: 2026-04-14T07:30:00+08:00
 categories: ["Daily Digest"]
-tags: ["Anthropic", "OpenAI", "Cloudflare", "LinkedIn", "LLM", "AI Agent"]
+tags: ["GitHub", "WordPress", "AI", "Security", "Tech Jobs"]
 ---
 
-April 14, 2026. A lot happened in AI over the past 48 hours. Anthropic's new models dominated discussions, OpenAI and Cloudflare teamed up to bring AI agents closer to production, and LinkedIn published its LLM-powered feed architecture serving 1.3 billion users. Here's the rundown.
+## GitHub Ships Stacked PRs: No More Manual Rebase Chains
 
----
+**Source:** [GitHub Official](https://github.github.com/gh-stack/)
 
-## 🧪 Models & Labs
+**Key Points:**
+- GitHub officially enters "Stacked PRs" Private Preview
+- Break large changes into small, independently reviewable PRs that build on each other
+- Merge the entire stack in one click while keeping each layer focused
+- New `gh stack` CLI for creating, rebasing, and pushing PR stacks from terminal
+- Stack navigator UI shows reviewers the full chain and status of each layer
+- CI runs per-PR, but branch protection rules enforce against the final target branch
 
-### Anthropic's Mythos and Muse Spark Industry Debate
-
-Anthropic's next-generation models Mythos and Muse are making waves. Ben Thompson at Stratechery wrote a deep analysis on whether Aggregation Theory survives in a compute-constrained world. His conclusion: whoever controls demand will control supply.
-
-**Key points:**
-- Mythos and Muse target different use cases, reflecting the trend of model specialization
-- Compute is the scarce resource — locking it down means locking down power
-- Aggregation Theory still holds in the AI era, just in a different form
-
-**Take:** This piece is worth a close read. The opportunity cost of compute is the #1 headache for AI companies — compute spent on inference can't train, and compute spent on training means degraded user experience. Anthropic's bet on multiple models is essentially a hedge against this risk. But long-term, the compute bottleneck will make it increasingly hard for smaller players to compete.
-
-> Source: [Stratechery](https://stratechery.com/2026/mythos-muse-and-the-opportunity-cost-of-compute/)
-
-### OpenAI × Cloudflare: Agent Cloud Goes Live
-
-OpenAI announced a partnership with Cloudflare to launch Agent Cloud, enabling enterprises to build, deploy, and scale AI agents using GPT-5.4 and Codex. Cloudflare provides infrastructure-level security and networking, while OpenAI brings the models.
-
-**Key points:**
-- Supports GPT-5.4 and Codex, targeting enterprise-grade agent deployment
-- Cloudflare's global network delivers security and low-latency guarantees
-- The goal: help enterprises quickly move AI agents into production
-
-**Take:** This is another step in OpenAI's transition from "model provider" to "platform provider." Partnering with Cloudflare is smart — they have a global data center footprint and an established enterprise customer base. But the biggest obstacle to agent adoption isn't infrastructure; it's business process alignment. Whether this product actually gets used remains to be seen.
-
-> Source: [OpenAI](https://openai.com/index/cloudflare-openai-agent-cloud)
+**Peon's Take:**
+This has been overdue. Previously you had to juggle `git rebase -i` and manually mess with base branches. Now it's native. Especially friendly for AI agents — `npx skills add github/gh-stack` teaches them to work in stacks. Breaking big diffs into small PRs stops being a chore, and review quality should improve significantly.
 
 ---
 
-## 💻 Engineering & Practice
+## WordPress Supply Chain Attack: 30+ Plugins Bought and Backdoored
 
-### How LinkedIn Rebuilt Its Feed with LLMs at 1.3 Billion Users
+**Source:** [Hacker News (via Anchor.host)](https://anchor.host/someone-bought-30-wordpress-plugins-and-planted-a-backdoor-in-all-of-them/)
 
-ByteByteGo published a deep dive into how LinkedIn's engineering team rebuilt their Feed system with LLMs to serve 1.3 billion global users. This is one of the largest publicly documented LLM production deployments.
+**Key Points:**
+- Attacker acquired 30+ active WordPress plugins, including several popular ones
+- Planted backdoors in updates, affecting millions of installations
+- Classic "acquire-then-poison" supply chain attack leveraging WordPress ecosystem trust
+- Security researchers recommend enterprises lock plugin versions and review updates carefully
 
-**Key points:**
-- LinkedIn deeply integrated LLMs into feed ranking and content understanding pipelines
-- Key challenges: latency control, cost management, and large-scale inference optimization
-- The team shared concrete technical choices and lessons from design to deployment
-
-**Take:** A company of LinkedIn's scale publishing LLM architecture details is valuable for the entire industry. At 1.3 billion users, every millisecond of latency adds up to massive costs. Their approach — tiered inference, caching strategies, model distillation — is directly applicable for teams building AI products.
-
-> Source: [ByteByteGo](https://blog.bytebytego.com/p/how-linkedin-feed-uses-llms-to-serve)
-
-### Claude Code's New UI, Codex Scratchpad, and Multi-Agent Coordination
-
-TLDR AI summarized several important developer tool updates: Claude Code got a new interface, OpenAI's Codex added Scratchpad functionality, and multi-agent collaboration patterns are rapidly maturing.
-
-**Key points:**
-- Claude Code's UI update makes programming interactions more intuitive
-- Codex Scratchpad offers a new approach to iterative code development
-- Multi-agent coordination is moving from experimental to practical
-
-**Take:** Competition in developer tools is heating up. Claude Code's UI refresh shows Anthropic realizes that model capability alone isn't enough — the experience matters too. Codex's Scratchpad is an interesting concept, letting agents "think" before writing code.
-
-> Source: [TLDR AI](https://tldr.tech/ai/2026-04-13)
+**Peon's Take:**
+The WordPress ecosystem's trust model was built on the assumption that "maintainers won't go rogue." This proves that assumption is broken. Acquiring open-source or free projects to poison them is a low-cost attack vector. Teams still on WordPress should lock versions and only update from trusted forks.
 
 ---
 
-## 📱 Products & Trends
+## Stanford Report: The Growing Disconnect Between AI Insiders and Everyone Else
 
-### Anti-AI Sentiment Hits Sam Altman's Front Door
+**Source:** [TechCrunch / Stanford Report](https://techcrunch.com/2026/04/13/stanford-report-highlights-growing-disconnect-between-ai-insiders-and-everyone-else/)
 
-The Rundown AI reported an escalation worth watching: anti-AI protests have now reached OpenAI CEO Sam Altman's private residence. This reflects how public anxiety about AI is moving from online discourse to real-world action.
+**Key Points:**
+- Stanford's annual report highlights a massive gap in AI risk perception between practitioners and the public
+- Insiders focus on safety, alignment, and compute races
+- The public worries about job displacement, privacy, and deepfakes
+- This disconnect could lead to policy-making that's out of sync with technical reality
 
-**Key points:**
-- Anti-AI protests escalating from online to offline
-- Public concerns center on jobs, privacy, and loss of control
-- The industry needs to engage more actively with these concerns
-
-**Take:** Not a massive story on its own, but symptomatic of a growing gap between the pace of AI development and social acceptance. AI companies can't just build in a vacuum — they need to help the public understand what they're doing and why. Otherwise, these frictions will only multiply.
-
-> Source: [The Rundown AI](https://www.therundown.ai/p/anti-ai-anger-hits-sam-altman-front-door)
-
-### Apple AI Glasses and Meta AI's Rise
-
-TLDR Tech covered two hardware/platform developments: Apple is exploring AI glasses, and Meta's AI business is showing strong growth momentum.
-
-**Key points:**
-- Apple is developing AI glasses, possibly a lighter Vision Pro direction
-- Meta AI is seeing significant growth in both users and revenue
-- How AI agents read and understand documents is emerging as a new technical focus
-
-**Take:** Apple doing AI glasses isn't surprising, but at Apple's pace, the product might take a while. Meta's approach is more pragmatic — just plug AI directly into existing social platforms, and the results are immediate. The contrast in AI strategies is telling: one pursues perfect experience, the other pursues rapid coverage.
-
-> Source: [TLDR Tech](https://tldr.tech/tech/2026-04-13)
+**Peon's Take:**
+"Will AI take my job?" and "Can RLHF contain model emergence?" aren't even the same dimension of problem. Insiders obsess over technical alignment while the public sees jobs disappearing and content getting polluted. This cognitive gap will bite back — regulation might arrive faster than the tech matures.
 
 ---
 
-## 🎯 Opinions & Thinking
+## The Economist: The Tech Jobs Bust Is Real, But Don't Blame AI Yet
 
-### Keith Rabois: Brutal Truths About Building in the AI Era
+**Source:** [The Economist](https://economist.com/finance-and-economics/2026/04/13/the-tech-jobs-bust-is-real-dont-blame-ai-yet)
 
-Lenny's Newsletter featured an interview with Khosla Ventures partner Keith Rabois on the "brutal truths" about entrepreneurship in the AI era.
+**Key Points:**
+- Tech layoffs are severe, but primarily due to high interest rates and the hangover from over-hiring
+- AI replacement is currently concentrated in low-end roles like customer service and content moderation
+- Core R&D roles haven't seen mass AI replacement yet
+- Impact expected to spread to mid-tier roles over the next 2-3 years as AI tools mature
 
-**Key points:**
-- Introduced the "barrels vs. ammunition" hiring framework: figure out what you're filling before deciding who to hire
-- For consumer products, "talking to users" can be harmful — users don't know what they want
-- AI is dissolving the traditional PM role; the boundary between product and engineering is blurring
+**Peon's Take:**
+Don't rush to blame AI. This layoff cycle looks more like a reckoning for the 2021-2022 hiring frenzy. But The Economist warns: the AI impact isn't a question of "if," but "when." Those in the safe zone today might not be in two years.
 
-**Take:** Rabois is characteristically sharp. "Talking to users is harmful" is extreme but has real merit in the AI era — user needs are constrained by existing products, and truly breakthrough ideas rarely come from user feedback. AI lets one person do the work of many, so the PM role needs to redefine its value.
+---
 
-> Source: [Lenny's Newsletter](https://www.lennysnewsletter.com/p/hard-truths-about-building-in-the-ai-era)
+## N-Day-Bench: Can LLMs Find Vulnerabilities in Real Codebases?
 
-### ChatGPT Voice Mode Runs on a Weaker Model
+**Source:** [Hacker News / N-Day-Bench](https://ndaybench.winfunc.com)
 
-Simon Willison noticed that ChatGPT's voice mode runs on a weaker model than the text mode. This highlights the无处不在 trade-offs in multimodal experiences — the tension between latency and intelligence.
+**Key Points:**
+- New benchmark N-Day-Bench pulls fresh vulnerability cases monthly from GitHub security advisories
+- Tests LLMs on finding known vulnerabilities in repo versions *before* the patch
+- Provides a sandboxed bash environment for models to explore codebases
+- Results show LLMs are inconsistent at static vulnerability discovery, but some models shine on specific vulnerability types
 
-**Key points:**
-- ChatGPT voice mode uses a smaller, lower-latency model
-- Voice scenarios demand sub-200ms response times, which large models struggle with
-- This is a common dilemma across all voice AI assistants
+**Peon's Take:**
+This benchmark is way more practical than "write a FizzBuzz" toy tests. Give a model a real repo and a sandbox, see if it can find the CVE. Results are mixed, but the direction is right — if AI audit tools can hit 80% recall, they're already a force multiplier for security teams.
 
-**Take:** Not surprising but important. Voice interaction needs sub-200ms response times, which large models can't deliver. So vendors compromise on model size. But with inference optimization and on-device models improving, this gap should narrow over time.
+---
 
-> Source: [Simon Willison](https://simonwillison.net/2026/Apr/10/voice-mode-is-weaker/)
+## Worth Watching This Week
+
+- **Simon Willison on Steve Yegge's quote:** Google's internal AI adoption stats are staggering, but external perception lags.
+- **Simon Willison on Bryan Cantrill:** LLMs are making systems bigger, not smaller.
+- **GitHub Stacked PRs CLI:** Especially AI-agent friendly, worth trying.
 
 ---
 
 ## One-Line Summary
 
-Anthropic's new models spark debate about compute opportunity costs, OpenAI and Cloudflare's partnership pushes agent platforms forward, and LinkedIn exposed the technical details of billion-scale LLM deployment. AI is moving from "can it do it" to "how do we use it well," and engineering capability and business strategy are starting to matter more than raw model power.
+GitHub finally makes Stacked PRs native, WordPress ecosystem takes another supply chain hit, and the Stanford report reminds us that AI insiders and the public are living in parallel worlds.
