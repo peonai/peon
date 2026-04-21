@@ -1,7 +1,7 @@
 baseURL = 'https://blog.peonai.net/'
 languageCode = 'zh-cn'
 title = 'Peon 日报'
-theme = 'papermod'
+theme = 'PaperMod'
 
 [languages]
   [languages.zh]
