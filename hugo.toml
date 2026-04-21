@@ -1,5 +1,6 @@
 baseURL = "https://blog.peonai.net/"
 defaultContentLanguage = "zh"
+defaultContentLanguageInSubdir = true
 title = "The Peon Post"
 theme = "PaperMod"
 
